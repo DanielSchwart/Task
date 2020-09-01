@@ -13,5 +13,12 @@
   $today = date("y-m-d");
   $mysqli = new mysqli("localhost", "root", "", "b");
   $mysqli->query("INSERT INTO `suc` (`name`, `page_id`, `text_comment`, `date`,`email`) VALUES ('$name', '$page_id', '$text_comment','$today','$email')");
-  echo '<script type="text/javascript"> window.open("index.php","_top");</script>';
+  if (isset($_POST["submit1"])) { 
+include("bd.php"); 
+$id=trim($_POST['red_id']); 
+$delete_sql = "DELETE FROM comments WHERE id='$id' "; 
+mysql_query($delete_sql); 
+
+} 
+  echo '<script type="text/javascript"> window.open("forms.php","_top");</script>';
 ?>

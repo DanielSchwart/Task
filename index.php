@@ -103,7 +103,7 @@ session_start();
 													<p>Имя<sup>*</sup></p>
 													<input class='form-control' type='text' required  name='name'size='15' maxlength='15' placeholder='Введите пвсевдоним'>
 													<br>
-													
+													<p>Email<sup>*</sup></p>
 													<input class='form-control' type='email' required  name='email'  placeholder='Введите email'>
 													<br>
 													<br>
